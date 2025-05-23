@@ -4,7 +4,10 @@ const reasonValidation = require("../validations/reason");
 
 const create = async (req, res) => {
   try {
-    const value = await reasonValidation.validateAsync(req.body);
+    const { error, value } = await reasonValidation.validate(req.body);
+    if (error) {
+      return res.status(400).send({ message: error.message });
+    }
     const { reason_lid } = value;
     const newstatus = await pool.query(
       `INSERT INTO reason (reason_lid) VALUES ($1) RETURNING *`,
