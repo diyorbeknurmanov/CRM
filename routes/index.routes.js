@@ -1,6 +1,7 @@
 const branch_router = require("./branch.routes");
 const divece = require("./deice.routes");
 const group_router = require("./group.routes");
+const lesson_router = require("./lesson.routes");
 const lid_router = require("./lid.routes");
 const paymnet_router = require("./payment.routes");
 const reason_router = require("./reason.routes");
@@ -8,7 +9,9 @@ const role_router = require("./role.routes");
 const stuff_router = require("./staff.routes");
 const stage_router = require("./stage.routes");
 const status_router = require("./status.routes");
+const SG_router = require("./student_group.routes");
 const students_router = require("./students.routes");
+const student_lesson_router = require("./studet_lesson.routes");
 
 const router = require("express").Router();
 
@@ -23,5 +26,8 @@ router.use("/divice", divece);
 router.use("/lid", lid_router);
 router.use("/students", students_router);
 router.use("/payment", paymnet_router);
+router.use("/lesson", lesson_router);
+router.use("/sutudent_lesson", student_lesson_router);
+router.use("/sutudent_group", SG_router)
 
 module.exports = router;
