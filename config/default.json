@@ -4,5 +4,14 @@
   "db_username": "postgres",
   "db_port": 5433,
   "db_password": "5432",
-  "db_name": "crm"
+  "db_name": "crm",
+
+  "smtp_password": "iaek pptv zynw jtqe",
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 587,
+  "smtp_user": "diyorbeknurmanov678@gmail.com",
+  "api_url": "http://localhost:3000",
+
+  "iv": "adssd123",
+  "crypt_password": "JudaKuchliMaxfiyPassword"
 }
